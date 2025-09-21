@@ -7,7 +7,6 @@
 - Responsive multi-page frontend with navigation and themed UI.
 - Consumption logging form connected to backend API.
 - Consumption logs displayed in a dynamic table with live updates.
-- Backend REST API built with Express and MongoDB via Mongoose.
 - Basic validation and error handling.
 - User login page prototype (static).
 - CORS enabled for API access from frontend.
