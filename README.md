@@ -18,8 +18,8 @@
 
 - Frontend: HTML, CSS, JavaScript
 - Backend: Node.js, Express
-- Database: MongoDB (Atlas or local)
-- Deployment: Can be deployed to platforms like Netlify (frontend) and Render/Railway (backend)
+
+- Deployment: Can be deployed to platforms like Netlify (frontend) and  (backend)
   
 ---
 
