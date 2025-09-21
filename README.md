@@ -1,87 +1,41 @@
-# hack-and-crush_1
+# Smart Water Management - Backend
 
----
+A minimal Express.js server with MongoDB (via Mongoose) for the Smart Water Management app.
 
-## Features
+## Prerequisites
+- Node.js 18+ (recommended) and npm
+- A MongoDB instance (local or Atlas)
 
-- Responsive multi-page frontend with navigation and themed UI.
-- Consumption logging form connected to backend API.
-- Consumption logs displayed in a dynamic table with live updates.
-- Basic validation and error handling.
-- User login page prototype (static).
-- CORS enabled for API access from frontend.
-  
----
+## Setup
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Create an `.env` file from the example and set your connection string:
+   ```bash
+   copy .env.example .env   # Windows PowerShell: cp .env.example .env also works
+   ```
+   Edit `.env`:
+   ```dotenv
+   MONGO_URI=mongodb://127.0.0.1:27017/smartwater
+   # PORT=5000
+   ```
 
-## Tech Stack
+## Run
+- Development (auto-restart with nodemon):
+  ```bash
+  npm run dev
+  ```
+- Production:
+  ```bash
+  npm start
+  ```
 
-- Frontend: HTML, CSS, JavaScript
-- Backend: Node.js, Express
+The server will start on `http://localhost:5000` (or the port set in `PORT`).
 
-- Deployment: Can be deployed to platforms like Netlify (frontend) and  (backend)
-  
----
+## Endpoints
+- `GET /api/health` — returns service status and current time
 
-## Setup Instructions
-
-### Backend Setup
-
-1. Clone the repo:
-    ```bash
-    git clone https://github.com/yourusername/smart-water-management.git
-    cd smart-water-management/backend
-    ```
-
-2. Install dependencies:
-    ```bash
-    npm install
-    ```
-
-3. Configure environment variables:
-    - Copy `.env.example` to `.env`
-    - Set your MongoDB URI in `.env` as:
-      ```
-      MONGO_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/waterapp?retryWrites=true&w=majority
-      PORT=5000
-      ```
-
-4. Start the server:
-    ```bash
-    npm run dev
-    ```
-    The server runs on `http://localhost:5000`.
-
-5. Test API health check:
-    - Open browser or Postman and GET:  
-      `http://localhost:5000/api/health`  
-      Should return a success message.
-
----
-
-### Frontend Setup
-
-1. Open the `frontend` folder.
-
-2. Open `consumption.html` (or other pages) in a browser directly.
-
-3. The consumption form is connected to the backend API and supports:
-
-    - Logging consumption (POST)
-    - Viewing consumption logs (GET)
-
----
-
-## API Endpoints
-
-- `GET /api/health`  
-  Health check endpoint.
-
-- `POST /api/consumption`  
-  Create a consumption log.  
-  Body example:
-  ```json
-  {
-    "date": "2025-09-20",
-    "litersUsed": 1200,
-    "userId": "user123"
-  }
+## Notes
+- On startup, if `MONGO_URI` is missing, the server will log an error and continue running so you can still hit `/api/health`.
+- When `MONGO_URI` is provided and reachable, you will see `MongoDB connected` in the console. Errors are logged with the message `MongoDB connection error:`.

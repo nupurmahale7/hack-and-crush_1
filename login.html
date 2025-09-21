@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Smart Water Management</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <nav>
+    <div class="container nav-inner">
+      <div class="brand">
+        <div class="logo"></div>
+        <span>Smart Water</span>
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tanker.html">Tanker Marketplace</a></li>
+        <li><a href="consumption.html">Consumption Tracking</a></li>
+        <li><a href="leak.html">Leak Alerts</a></li>
+        <li><a href="conservation.html">Conservation Hub</a></li>
+        <li><a href="society.html">Society Dashboard</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="page">
+    <header class="hero">
+      <div class="container">
+        <h1>Login</h1>
+        <p>Access your Smart Water Management dashboard.</p>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container">
+        <div class="auth-wrap" style="max-width: 640px; margin: 0 auto;">
+          <div class="auth-card" style="max-width: 520px; margin: 0 auto;">
+            <form id="login-form">
+              <div class="row">
+                <div>
+                  <label class="label" for="identifier">Email or Username</label>
+                  <input id="identifier" class="input" name="identifier" type="text" placeholder="you@example.com or username" required />
+                </div>
+                <div>
+                  <label class="label" for="password">Password</label>
+                  <input id="password" class="input" name="password" type="password" placeholder="••••••••" required />
+                  <div style="display:flex; align-items:center; gap: 0.5rem;">
+                    <input type="checkbox" id="show-password" />
+                    <label for="show-password" class="muted" style="user-select:none;">Show Password</label>
+                  </div>
+                </div>
+              </div>
+              <button class="btn" type="submit">Login</button>
+            </form>
+            <div class="space"></div>
+            <p class="muted" style="text-align:center; font-size: 0.95rem;">
+              Don't have an account? <a href="#register">Register here.</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div>&copy; 2025 Smart Water Management. All rights reserved.</div>
+      <div class="links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
